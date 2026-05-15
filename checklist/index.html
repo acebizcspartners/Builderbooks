@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EOFY Builder Checklist | Builder Accountant</title>
+<meta name="description" content="The end-of-financial-year checklist Australian builders use to close their books cleanly. 6-week countdown, 40 commonly missed deductions, WIP &amp; TPAR tidy-up. Free.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A; --ink: #161616; --charcoal: #1F1F1F;
+    --slate: #4A4A4A; --grey: #6B6B6B; --line: #E5E5E5;
+    --paper: #FAFAFA; --white: #FFFFFF;
+    --yellow: #FFD400; --yellow-deep: #F5C400;
+    --font-display: "Archivo Black", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== Screen-only top bar ===== */
+  .topbar {
+    background: var(--black);
+    color: var(--white);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .topbar a.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: .95rem;
+    letter-spacing: .02em;
+  }
+  .brand-mark {
+    width: 32px; height: 32px;
+    background: var(--yellow); color: var(--black);
+    display: grid; place-items: center;
+    border-radius: 4px;
+  }
+  .topbar-cta {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--black);
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: .92rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn:hover { background: var(--yellow-deep); }
+  .btn-ghost {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,.4);
+    color: var(--white);
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.7); }
+  .btn-dark { background: var(--black); color: var(--white); }
+  .btn-dark:hover { background: #222; }
+
+  /* ===== Page wrap ===== */
+  .doc {
+    max-width: 820px;
+    margin: 28px auto;
+    background: var(--white);
+    padding: 56px 56px 64px;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  }
+
+  .doc-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 4px solid var(--black);
+    margin-bottom: 28px;
+  }
+  .doc-band-eye {
+    font-family: var(--font-display);
+    font-size: .85rem;
+    letter-spacing: .14em;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .doc-band-eye .brand-mark { width: 26px; height: 26px; }
+  .doc-band-yr {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    color: var(--black);
+    background: var(--yellow);
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    margin: 0 0 10px;
+    color: var(--black);
+    letter-spacing: -0.01em;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--slate);
+    margin: 0 0 20px;
+    max-width: 60ch;
+  }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    font-size: .85rem;
+    color: var(--grey);
+    border-top: 1px dashed var(--line);
+    border-bottom: 1px dashed var(--line);
+    padding: 12px 0;
+    margin-bottom: 36px;
+  }
+  .hero-meta strong { color: var(--black); font-weight: 700; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin: 32px 0 6px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .week-tag {
+    font-size: .68rem;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 4px 8px;
+    border-radius: 3px;
+    letter-spacing: .12em;
+    font-family: var(--font-body);
+    font-weight: 800;
+  }
+  h2 + p {
+    margin: 0 0 14px;
+    color: var(--slate);
+    font-size: .95rem;
+  }
+
+  /* Checklist items */
+  ul.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: grid;
+    gap: 10px;
+  }
+  ul.checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: .96rem;
+    line-height: 1.45;
+    color: var(--charcoal);
+    transition: background .12s ease;
+  }
+  ul.checklist li:hover { background: #FFFCE5; }
+  ul.checklist input[type="checkbox"] {
+    flex: 0 0 auto;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--charcoal);
+    border-radius: 4px;
+    margin: 2px 0 0;
+    cursor: pointer;
+    position: relative;
+    background: var(--white);
+  }
+  ul.checklist input[type="checkbox"]:checked {
+    background: var(--yellow);
+    border-color: var(--black);
+  }
+  ul.checklist input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 3px; top: 2px;
+    width: 8px; height: 4px;
+    border-left: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    transform: rotate(-45deg);
+  }
+  ul.checklist input[type="checkbox"]:checked + label { text-decoration: line-through; color: var(--grey); }
+  ul.checklist label { cursor: pointer; flex: 1; }
+  ul.checklist .note { font-size: .82rem; color: var(--grey); display: block; margin-top: 2px; }
+
+  /* Deductions grid */
+  .deductions {
+    columns: 2;
+    column-gap: 28px;
+    margin: 0 0 36px;
+    padding: 0;
+    list-style: none;
+  }
+  .deductions li {
+    break-inside: avoid;
+    padding: 6px 0 6px 26px;
+    position: relative;
+    font-size: .92rem;
+    color: var(--charcoal);
+    line-height: 1.4;
+  }
+  .deductions li::before {
+    counter-increment: ded;
+    content: counter(ded);
+    position: absolute;
+    left: 0; top: 6px;
+    width: 18px;
+    font-family: var(--font-display);
+    font-size: .72rem;
+    color: var(--yellow);
+    background: var(--black);
+    text-align: center;
+    border-radius: 3px;
+    padding: 1px 0;
+  }
+  .deductions { counter-reset: ded; }
+
+  /* Final CTA */
+  .cta-block {
+    margin-top: 36px;
+    padding: 28px;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .cta-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--white);
+    margin: 0 0 6px;
+  }
+  .cta-block p { margin: 0 0 18px; color: rgba(255,255,255,.78); }
+  .cta-block .phone {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    letter-spacing: .01em;
+  }
+  .cta-block .phone:hover { background: var(--yellow-deep); }
+
+  .legal {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: .78rem;
+    color: var(--grey);
+    line-height: 1.5;
+  }
+  .legal strong { color: var(--charcoal); }
+
+  /* ===== Print stylesheet ===== */
+  @media print {
+    body { background: var(--white); }
+    .topbar, .print-hide { display: none !important; }
+    .doc {
+      max-width: 100%;
+      margin: 0;
+      padding: 16mm 14mm;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    h2 { page-break-after: avoid; break-after: avoid; }
+    ul.checklist li, .deductions li { page-break-inside: avoid; break-inside: avoid; background: transparent; }
+    ul.checklist li:hover { background: transparent; }
+    .cta-block { background: var(--white); color: var(--black); border: 2px solid var(--black); }
+    .cta-block h3, .cta-block p { color: var(--black); }
+    .cta-block p { color: var(--charcoal); }
+    .deductions { columns: 2; }
+    a { color: var(--black); text-decoration: none; }
+    @page { size: A4; margin: 12mm; }
+  }
+
+  @media (max-width: 720px) {
+    .doc { padding: 28px 22px; margin: 16px 8px; }
+    .deductions { columns: 1; }
+    .hero-meta { gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Screen-only top bar -->
+<div class="topbar print-hide">
+  <a href="../index.html" class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+        <path d="M4 28 L16 6 L28 28 Z"/>
+        <path d="M10 28 L10 20 L22 20 L22 28"/>
+      </svg>
+    </span>
+    <span>BUILDER ACCOUNTANT</span>
+  </a>
+  <div class="topbar-cta">
+    <button class="btn" onclick="window.print()" type="button">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>
+      <span>Save as PDF / Print</span>
+    </button>
+    <a class="btn btn-ghost" href="tel:+61296866333">Call 02 9686 6333</a>
+  </div>
+</div>
+
+<article class="doc">
+
+  <div class="doc-band">
+    <span class="doc-band-eye">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square">
+          <path d="M4 28 L16 6 L28 28 Z"/>
+          <path d="M10 28 L10 20 L22 20 L22 28"/>
+        </svg>
+      </span>
+      BUILDER ACCOUNTANT
+    </span>
+    <span class="doc-band-yr">EOFY 2025/26</span>
+  </div>
+
+  <h1>End-of-Financial-Year Builder Checklist</h1>
+  <p class="hero-sub">Your 6-week countdown to a clean year-end — every action item, every lodgement, every deduction Australian builders commonly miss.</p>
+  <div class="hero-meta">
+    <span><strong>Audience:</strong> Aussie builders, tradies &amp; subbies</span>
+    <span><strong>Tax year:</strong> 1 July 2025 – 30 June 2026</span>
+    <span><strong>Updated:</strong> May 2026</span>
+  </div>
+
+  <!-- ===== SECTION 1 ===== -->
+  <h2><span class="week-tag">6&nbsp;WEEKS&nbsp;OUT</span> Mid-May: get the books in shape</h2>
+  <p>The work that's easiest to do early — before the end-of-year scramble. Aim to clear this list by 31&nbsp;May.</p>
+  <ul class="checklist">
+    <li><input type="checkbox" id="c1"><label for="c1">Reconcile every bank, credit card and loan account up to the latest closed month</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Match supplier statements to your accounts payable — chase missing bills</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">Run aged receivables — chase invoices over 30 days, escalate over 60</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4">Review WIP register — confirm % complete or cost-to-complete for every open job</label></li>
+    <li><input type="checkbox" id="c5"><label for="c5">Stocktake materials on hand at yard, ute, container, site</label></li>
+    <li><input type="checkbox" id="c6"><label for="c6">Compare fixed asset register to reality — flag scrapped or sold plant <span class="note">Disposal losses are often missed deductions.</span></label></li>
+    <li><input type="checkbox" id="c7"><label for="c7">Year-to-date P&amp;L review — flag anything weird before tax planning</label></li>
+    <li><input type="checkbox" id="c8"><label for="c8">Book your pre-30-June tax planning meeting with your accountant</label></li>
+  </ul>
+
+  <!-- ===== SECTION 2 ===== -->
+  <h2><span class="week-tag">2–3&nbsp;WEEKS&nbsp;OUT</span> Mid-June: decisions &amp; super</h2>
+  <p>This is when most tax-saving decisions actually get made. Don't leave it later.</p>
+  <ul class="checklist">
+    <li><input type="checkbox" id="c9"><label for="c9">Verify every subcontractor ABN via the ATO ABN Lookup <span class="note">Cancelled ABNs = no GST claim, no deduction without withholding.</span></label></li>
+    <li><input type="checkbox" id="c10"><label for="c10">Confirm all subbie payments are coded for TPAR — labour vs materials</label></li>
+    <li><input type="checkbox" id="c11"><label for="c11">Decide on year-end equipment / vehicle purchases for instant write-off / depreciation</label></li>
+    <li><input type="checkbox" id="c12"><label for="c12">Pay outstanding super so it clears the clearing house by 28&nbsp;June <span class="note">Cleared, not just paid — only cleared super is deductible this year.</span></label></li>
+    <li><input type="checkbox" id="c13"><label for="c13">Bring forward deductible expenses where cash allows</label></li>
+    <li><input type="checkbox" id="c14"><label for="c14">Defer income where possible — but mind the constructive receipt rules</label></li>
+    <li><input type="checkbox" id="c15"><label for="c15">Review director loan balances — fix any Div&nbsp;7A exposure</label></li>
+    <li><input type="checkbox" id="c16"><label for="c16">Draft trust resolutions if you operate a discretionary trust <span class="note">Must be signed before 30&nbsp;June or the trustee is taxed at 47%.</span></label></li>
+  </ul>
+
+  <!-- ===== SECTION 3 ===== -->
+  <h2><span class="week-tag">1&nbsp;WEEK&nbsp;OUT</span> Late June: tighten up</h2>
+  <p>The last working week of the year. Lock things down.</p>
+  <ul class="checklist">
+    <li><input type="checkbox" id="c17"><label for="c17">Final super contribution paid and cleared</label></li>
+    <li><input type="checkbox" id="c18"><label for="c18">All Q4 BAS-period invoices issued and dated by 30&nbsp;June</label></li>
+    <li><input type="checkbox" id="c19"><label for="c19">Cut-off date for supplier invoices communicated to subbies and suppliers</label></li>
+    <li><input type="checkbox" id="c20"><label for="c20">Plant &amp; equipment purchases finalised, in service by 30&nbsp;June</label></li>
+    <li><input type="checkbox" id="c21"><label for="c21">Asset transfers / sales / scrapping documented</label></li>
+    <li><input type="checkbox" id="c22"><label for="c22">Reconcile director and family member drawings</label></li>
+    <li><input type="checkbox" id="c23"><label for="c23">Audit personal vs business expenses — split out anything mixed</label></li>
+  </ul>
+
+  <!-- ===== SECTION 4 ===== -->
+  <h2><span class="week-tag">30&nbsp;JUNE</span> Close-of-business snapshot</h2>
+  <p>The numbers that need to be locked at the strike of midnight.</p>
+  <ul class="checklist">
+    <li><input type="checkbox" id="c24"><label for="c24">Stocktake completed, signed, dated</label></li>
+    <li><input type="checkbox" id="c25"><label for="c25">WIP schedule finalised — stage of completion locked per job</label></li>
+    <li><input type="checkbox" id="c26"><label for="c26">Retention monies tracked correctly (held vs released)</label></li>
+    <li><input type="checkbox" id="c27"><label for="c27">Variations &amp; extras invoiced or accrued</label></li>
+    <li><input type="checkbox" id="c28"><label for="c28">Bank account balances screenshot / statement saved</label></li>
+    <li><input type="checkbox" id="c29"><label for="c29">Credit card balances screenshot / statement saved</label></li>
+    <li><input type="checkbox" id="c30"><label for="c30">Final payroll &amp; STP run for the year</label></li>
+  </ul>
+
+  <!-- ===== SECTION 5 ===== -->
+  <h2><span class="week-tag">AFTER&nbsp;EOFY</span> July: lodgements &amp; finalisations</h2>
+  <p>Year is closed — now the formal lodgements roll in. Get ahead of them.</p>
+  <ul class="checklist">
+    <li><input type="checkbox" id="c31"><label for="c31">STP finalisation lodged by 14&nbsp;July</label></li>
+    <li><input type="checkbox" id="c32"><label for="c32">PAYG income statements delivered to employees via myGov</label></li>
+    <li><input type="checkbox" id="c33"><label for="c33">TPAR data prep started for 28&nbsp;August deadline</label></li>
+    <li><input type="checkbox" id="c34"><label for="c34">Annual workers compensation declaration to iCare / WorkCover / WorkSafe</label></li>
+    <li><input type="checkbox" id="c35"><label for="c35">State payroll tax annual reconciliation lodged</label></li>
+    <li><input type="checkbox" id="c36"><label for="c36">Long service levy quarterly return lodged (LSC / QLeave / CoInvest)</label></li>
+    <li><input type="checkbox" id="c37"><label for="c37">Tax return data pack assembled and sent to accountant</label></li>
+    <li><input type="checkbox" id="c38"><label for="c38">Home Warranty Insurance financial statements prepped for annual eligibility</label></li>
+  </ul>
+
+  <!-- ===== Deductions ===== -->
+  <h2><span class="week-tag">BONUS</span> 40 deductions builders commonly miss</h2>
+  <p>Skim this list before you sign your return. We see these missed every single year.</p>
+  <ol class="deductions">
+    <li>Mobile phone (business %)</li>
+    <li>Home office occupancy &amp; running</li>
+    <li>Trade publications &amp; subscriptions</li>
+    <li>HIA / MBA / industry association fees</li>
+    <li>Online training (white card, asbestos, heights)</li>
+    <li>Software subscriptions (Buildxact, Tradify, simPRO)</li>
+    <li>Bank fees on business accounts</li>
+    <li>Interest on business loans &amp; equipment finance</li>
+    <li>Income protection insurance (personal)</li>
+    <li>Public liability premium</li>
+    <li>Professional indemnity premium</li>
+    <li>Contract works insurance</li>
+    <li>Vehicle running costs (logbook method)</li>
+    <li>Tools — instant write-off for sub-threshold</li>
+    <li>Protective clothing &amp; PPE</li>
+    <li>First aid &amp; site safety supplies</li>
+    <li>Site safety equipment</li>
+    <li>Subcontractor labour (full deductible)</li>
+    <li>Legitimate materials wastage</li>
+    <li>Sample products &amp; display materials</li>
+    <li>Marketing &amp; website costs</li>
+    <li>Customer entertainment (within limits)</li>
+    <li>Bad debt write-offs</li>
+    <li>Donations to DGR-registered charities</li>
+    <li>Self-education directly related to trade</li>
+    <li>Workshop / yard / container rent</li>
+    <li>Office supplies &amp; consumables</li>
+    <li>Photocopier / printer leases</li>
+    <li>Mobile internet / hotspot for site</li>
+    <li>Equipment finance interest</li>
+    <li>Hire purchase interest</li>
+    <li>Trade-in losses on plant</li>
+    <li>Asset disposal losses</li>
+    <li>Site signage &amp; banners</li>
+    <li>Vehicle signage &amp; wraps</li>
+    <li>Tax agent fees</li>
+    <li>Bookkeeping fees</li>
+    <li>Legal fees (revenue items only)</li>
+    <li>Software training courses</li>
+    <li>Travel between sites (NOT home → first site)</li>
+  </ol>
+
+  <!-- ===== Final CTA ===== -->
+  <div class="cta-block print-hide">
+    <h3>Want us to run this checklist <em>with</em> you?</h3>
+    <p>15 minutes on the phone. We'll work out where you are, what's at risk, and what we can save you before 30 June.</p>
+    <a class="phone" href="tel:+61296866333">📞 02 9686 6333</a>
+  </div>
+
+  <p class="legal">
+    <strong>General information only.</strong> This checklist is general in nature and does not constitute personal tax, financial or legal advice. Every builder's situation is different — speak to a registered tax agent before acting on anything here. Builder Accountant is a service of Ace Biz (ABN 89&nbsp;168&nbsp;839&nbsp;076), a Registered Tax Agent in Norwest NSW. Liability limited by a scheme approved under Professional Standards Legislation.
+  </p>
+
+</article>
+
+</body>
+</html>

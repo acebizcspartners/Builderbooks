@@ -1,0 +1,32 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+Icon?
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node (if ever added)
+node_modules/
+dist/
+build/
+
+# Environment / secrets — never commit these
+.env
+.env.local
+.env.*.local
+
+# Local netlify/vercel
+.netlify/
+.vercel/

@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Feasibility for Builders &amp; Developers | Builder Accountant</title>
+<meta name="description" content="Bank-ready development feasibility analysis for Australian builders &amp; developers. Land cost, build cost, GST margin scheme, hold costs, IRR. Know your numbers before the slab goes down. Call 02 9686 6333.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="Project Feasibility for Builders — Builder Accountant">
+<meta property="og:description" content="Bank-ready feasos. Land + build + margin scheme + IRR. From $1,200 per project.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://builderaccountant.com/services/project-feasibility/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Project Feasibility & Development Modelling for Builders",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "Builder Accountant",
+    "url": "https://builderaccountant.com",
+    "telephone": "+61-2-9686-6333",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Suite 204, 11 Solent Circuit",
+      "addressLocality": "Norwest",
+      "addressRegion": "NSW",
+      "postalCode": "2153",
+      "addressCountry": "AU"
+    }
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "The Hills District, NSW" },
+    { "@type": "AdministrativeArea", "name": "Central Coast, NSW" },
+    { "@type": "AdministrativeArea", "name": "New South Wales" }
+  ],
+  "serviceType": "Development feasibility analysis",
+  "description": "Bank-ready feasibility models for residential and small-commercial builds. Land cost, construction cost, GST margin scheme, hold costs, sale price, profit and IRR.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "AUD",
+    "price": "1200",
+    "description": "Per-project feasibility analysis, fixed fee from $1,200."
+  }
+}
+</script>
+
+<style>
+  /* Page-specific overrides for the landing page */
+  .lp-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 14px;
+    transition: color .12s ease;
+  }
+  .lp-back:hover { color: var(--yellow); }
+
+  .lp-pill {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+  }
+
+  /* Two-column deliverables */
+  .lp-deliv {
+    padding: clamp(72px, 9vw, 110px) 0;
+    background: var(--white);
+  }
+  .lp-deliv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .lp-deliv-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .lp-deliv-card:hover { border-color: var(--black); }
+  .lp-deliv-icon {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--yellow);
+    color: var(--black);
+    display: grid;
+    place-items: center;
+  }
+  .lp-deliv-card h3 { font-size: 1.05rem; margin: 0 0 6px; }
+  .lp-deliv-card p { font-size: .95rem; color: var(--slate); margin: 0; }
+
+  /* Sample feaso */
+  .lp-sample {
+    padding: clamp(72px, 9vw, 110px) 0;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .lp-sample-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .lp-sample-doc {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 14px 14px 0 0 var(--black);
+    font-size: .92rem;
+  }
+  .lp-sample-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+    align-items: baseline;
+  }
+  .lp-sample-row:last-of-type { border-bottom: 0; }
+  .lp-sample-row span:first-child { color: var(--slate); }
+  .lp-sample-row span:last-child { font-family: var(--font-display); color: var(--black); }
+  .lp-sample-section {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 2px solid var(--black);
+  }
+  .lp-sample-section h4 {
+    font-family: var(--font-display);
+    font-size: .82rem;
+    letter-spacing: .12em;
+    color: var(--black);
+    margin: 0 0 8px;
+  }
+  .lp-sample-profit {
+    margin-top: 18px;
+    padding: 16px;
+    background: var(--yellow);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+  }
+  .lp-sample-profit-lbl {
+    font-family: var(--font-display);
+    font-size: .8rem;
+    letter-spacing: .14em;
+    color: var(--black);
+  }
+  .lp-sample-profit-amt {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--black);
+  }
+  .lp-sample-disclaimer {
+    margin-top: 16px;
+    font-size: .72rem;
+    color: var(--grey);
+    text-align: center;
+  }
+
+  /* Single-price block */
+  .lp-price {
+    padding: clamp(72px, 9vw, 110px) 0;
+    background: var(--yellow);
+    color: var(--black);
+    border-top: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
+    text-align: center;
+  }
+  .lp-price h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 14px;
+  }
+  .lp-price-tag {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 10px;
+    background: var(--black);
+    color: var(--yellow);
+    padding: 22px 36px;
+    border-radius: 14px;
+    margin: 20px 0 24px;
+  }
+  .lp-price-tag-from {
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-top: 8px;
+    color: rgba(255,212,0,.7);
+  }
+  .lp-price-tag-amt {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 7vw, 4.8rem);
+    line-height: 1;
+  }
+  .lp-price-tag-per {
+    font-weight: 700;
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+  .lp-price p { max-width: 60ch; margin: 0 auto 24px; font-size: 1.05rem; color: rgba(0,0,0,.78); }
+
+  @media (max-width: 1024px) {
+    .lp-deliv-grid { grid-template-columns: 1fr; }
+    .lp-sample-grid { grid-template-columns: 1fr; gap: 36px; }
+    .lp-sample-doc { box-shadow: 8px 8px 0 0 var(--black); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Compact header (no nav — landing page) -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-row">
+    <a href="../../index.html" class="logo" aria-label="Builder Accountant home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+          <path d="M4 28 L16 6 L28 28 Z"/>
+          <path d="M10 28 L10 20 L22 20 L22 28"/>
+        </svg>
+      </span>
+      <span class="logo-text">BUILDER<span class="logo-text-2">ACCOUNTANT</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html#services">All services</a>
+      <a href="../../index.html#pricing">Pricing</a>
+      <a href="../../index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-call hdr-cta" href="tel:+61296866333">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span><strong>02 9686 6333</strong></span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <a class="lp-back" href="../../index.html">← Back to Builder Accountant</a>
+      <span class="lp-pill">PROJECT FEASIBILITY</span>
+      <h1>Don't pour the slab <span class="hl">before you know the numbers stack.</span></h1>
+      <p class="lead">Bank-ready development feasibility analysis for Australian builders &amp; small developers. Land cost. Construction cost. GST margin scheme. Hold costs. Sale price. Profit. IRR. All in writing, before you commit a dollar.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-xl" href="tel:+61296866333">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Call 02 9686 6333</span>
+        </a>
+        <a class="btn btn-ghost btn-xl" href="#deliverables">What's in a feaso →</a>
+      </div>
+      <div class="hero-trust">
+        <span><strong>From $1,200</strong> per project</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span>Bank-ready format</span>
+        <span class="dot" aria-hidden="true">·</span>
+        <span>72-hour turnaround</span>
+      </div>
+    </div>
+
+    <aside class="hero-card" aria-label="Quick contact">
+      <div class="hero-card-head">
+        <div class="pulse" aria-hidden="true"></div>
+        <span>Project on your desk?</span>
+      </div>
+      <h2 class="hero-card-title">15-min triage call.</h2>
+      <p class="hero-card-sub">Send us the address &amp; the plan. We'll tell you on the phone whether the numbers are even close before you pay for a full feaso.</p>
+      <a class="btn btn-primary btn-block" href="tel:+61296866333">Call 02 9686 6333</a>
+      <p class="hero-card-fineprint">Mon–Fri, 9am–5pm AEST.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- Pain -->
+<section class="pain">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow eyebrow-dark">THE PROBLEM</div>
+      <h2>Most builders lose money before site cut.</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-num">01</div>
+        <h3>The "back of the envelope" feaso.</h3>
+        <p>Pen, paper, hope. Build cost guessed at last project's rates, sale price pulled off realestate.com.au, GST forgotten entirely. The number looks great on the napkin and disastrous at the bank.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">02</div>
+        <h3>The lender knocks it back.</h3>
+        <p>Bank wants a structured feaso with sensitivities, GST margin scheme treatment, hold-cost forecast and DCF/IRR. You're scrambling for a model two weeks before settlement.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">03</div>
+        <h3>Profit gets eaten in the build.</h3>
+        <p>By the time you're 60% in, you realise the contingency was too thin, the holding costs blew out, and the margin you thought you had has evaporated. The feaso failed you before the build did.</p>
+      </div>
+    </div>
+    <div class="pain-cta">
+      <p class="pain-cta-text"><strong>We solve all three.</strong> Bank-ready feaso, in writing, before you commit.</p>
+      <a class="btn btn-primary btn-lg" href="tel:+61296866333">Call 02 9686 6333</a>
+    </div>
+  </div>
+</section>
+
+<!-- Deliverables -->
+<section class="lp-deliv" id="deliverables">
+  <div class="wrap">
+    <div class="section-head section-head-light">
+      <div class="eyebrow">WHAT YOU GET</div>
+      <h2>Every number a lender or partner will ever ask you about.</h2>
+      <p class="section-sub">Delivered as a clean Excel model + a one-page PDF summary you can email straight to your bank, broker or JV partner.</p>
+    </div>
+    <div class="lp-deliv-grid">
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>
+        </div>
+        <div>
+          <h3>Land &amp; acquisition costs</h3>
+          <p>Purchase price, stamp duty, legal, due diligence, finance arrangement, mortgage registration. Every line a lender expects to see.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+        </div>
+        <div>
+          <h3>Construction cost model</h3>
+          <p>Hard costs, soft costs, contingency. Built off your real quotes &amp; subbie rates — not generic per-m² figures that lie.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h3>GST margin scheme treatment</h3>
+          <p>Margin scheme vs full GST — modelled both ways. Most builders leave 5-figure GST savings on the table because nobody calculated this properly.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div>
+          <h3>Hold-cost forecast</h3>
+          <p>Council rates, water, interest on land &amp; construction loan, insurance, agent retention. Month-by-month all the way through.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+        </div>
+        <div>
+          <h3>Sale forecast &amp; revenue</h3>
+          <p>End-value estimate triangulated from comparable sales, agent appraisals and the gross realisation method. Realistic, not optimistic.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+        </div>
+        <div>
+          <h3>Profit, margin %, ROI &amp; IRR</h3>
+          <p>Net profit in dollars. Profit as a % of cost &amp; of revenue. ROI on your equity. Annualised IRR. The four numbers banks &amp; JV partners actually ask about.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 12 13 21 6"/><path d="M3 6v12h18V6"/></svg>
+        </div>
+        <div>
+          <h3>Sensitivity &amp; stress tests</h3>
+          <p>What happens if build cost blows out 10%? Sales price drops 5%? Project runs 3 months over? Three scenarios, side-by-side, so you can see the floor before you fall through it.</p>
+        </div>
+      </div>
+      <div class="lp-deliv-card">
+        <div class="lp-deliv-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div>
+          <h3>One-page lender PDF</h3>
+          <p>Bank-ready cover sheet summarising the deal in a single page. Email it straight to your broker. Looks like it came from a developer five times your size.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sample feaso -->
+<section class="lp-sample">
+  <div class="wrap lp-sample-grid">
+    <div>
+      <div class="eyebrow">SAMPLE OUTPUT</div>
+      <h2>The one-page summary your lender wants to see.</h2>
+      <p class="lead-dark">Every feaso comes with a clean cover sheet that summarises the deal. Underneath it sits the full Excel model — bank-ready, formula-traceable, sensitivity-tested.</p>
+      <p class="lead-dark">No back-of-the-napkin sums. No hidden assumptions. Numbers your bank, your broker and your JV partner will all sign off on.</p>
+      <a class="btn btn-primary btn-lg" href="tel:+61296866333">Get a feaso started — call now</a>
+    </div>
+    <div class="lp-sample-doc" aria-hidden="true">
+      <div class="doc-band" style="display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--black);padding-bottom:10px;margin-bottom:16px;">
+        <span style="font-family:var(--font-display);font-size:.78rem;letter-spacing:.12em;">FEASIBILITY SUMMARY</span>
+        <span style="font-size:.7rem;font-weight:800;letter-spacing:.14em;background:var(--yellow);padding:3px 8px;border-radius:3px;">SAMPLE</span>
+      </div>
+      <p style="font-family:var(--font-display);font-size:.9rem;margin:0 0 14px;">Lot 14, Sample St, Kellyville NSW</p>
+      <div class="lp-sample-section">
+        <h4>Acquisition</h4>
+        <div class="lp-sample-row"><span>Land purchase</span><span>$1,250,000</span></div>
+        <div class="lp-sample-row"><span>Stamp duty &amp; legals</span><span>$68,400</span></div>
+      </div>
+      <div class="lp-sample-section">
+        <h4>Construction</h4>
+        <div class="lp-sample-row"><span>Hard costs</span><span>$840,000</span></div>
+        <div class="lp-sample-row"><span>Soft costs &amp; contingency</span><span>$95,000</span></div>
+      </div>
+      <div class="lp-sample-section">
+        <h4>Holding &amp; finance</h4>
+        <div class="lp-sample-row"><span>Interest, rates, insurance</span><span>$72,500</span></div>
+        <div class="lp-sample-row"><span>Sales &amp; marketing</span><span>$58,000</span></div>
+      </div>
+      <div class="lp-sample-section">
+        <h4>Revenue</h4>
+        <div class="lp-sample-row"><span>Gross realisation</span><span>$2,750,000</span></div>
+        <div class="lp-sample-row"><span>Less GST (margin scheme)</span><span>$96,800</span></div>
+      </div>
+      <div class="lp-sample-profit">
+        <span class="lp-sample-profit-lbl">NET PROFIT · 17.4% ROI · IRR 21%</span>
+        <span class="lp-sample-profit-amt">$269,300</span>
+      </div>
+      <p class="lp-sample-disclaimer">Illustrative sample only. Your numbers will differ.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why us (reuse main site why styles) -->
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-copy">
+      <div class="eyebrow">WHY US FOR FEASOS</div>
+      <h2>Accountants who build the model, not just check it.</h2>
+      <p class="lead-dark">We don't just review someone else's spreadsheet. We build the feaso end-to-end, with your real quotes, your real subbie rates, your real cost of capital. That's why banks take ours seriously.</p>
+      <ul class="why-list">
+        <li><strong>Construction-specialist accountants.</strong> We don't model widgets — we model duplexes, townhouses, knockdown-rebuilds and small subdivisions every week.</li>
+        <li><strong>Bank-ready format.</strong> Major lenders &amp; private credit funders already accept our format. No reformatting, no re-explaining.</li>
+        <li><strong>72-hour turnaround.</strong> Send us the brief Monday, model on your desk Wednesday. We know deals move quickly.</li>
+        <li><strong>Fixed fee, no clock.</strong> $1,200 per project for a standard duplex/townhouse build. Bigger projects quoted up front, never billed by the hour.</li>
+        <li><strong>Sensitivities baked in.</strong> Every model ships with three scenarios so you see the floor, not just the ceiling.</li>
+        <li><strong>Tax-aware from day one.</strong> Margin scheme vs full GST, holding entity, profit-extraction strategy — all considered while the feaso is being built, not bolted on later.</li>
+      </ul>
+    </div>
+    <div class="why-stat-stack">
+      <div class="why-stat">
+        <div class="why-stat-num">72hr</div>
+        <div class="why-stat-lbl">Turnaround</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">$1,200</div>
+        <div class="why-stat-lbl">Standard feaso</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">3 scenarios</div>
+        <div class="why-stat-lbl">Sensitivity tests</div>
+      </div>
+      <div class="why-stat why-stat-yellow">
+        <div class="why-stat-num">Bank-ready</div>
+        <div class="why-stat-lbl">Major lender format</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="lp-price">
+  <div class="wrap">
+    <div class="eyebrow eyebrow-dark">PRICING</div>
+    <h2>One project. One fixed fee.</h2>
+    <div class="lp-price-tag">
+      <span class="lp-price-tag-from">FROM</span>
+      <span class="lp-price-tag-amt"><span style="font-size:.55em;vertical-align:top;opacity:.75;">$</span>1,200</span>
+      <span class="lp-price-tag-per">per project<br><small style="display:block;font-size:.7rem;font-weight:600;opacity:.55;letter-spacing:.08em;">GST EXCLUSIVE</small></span>
+    </div>
+    <p>Standard duplex, townhouse or knockdown-rebuild feaso from $1,200. Subdivisions, multi-unit and small-commercial projects quoted before we start — no hourly billing, no surprises. If we can't add at least 10× the fee in clarity or savings, you don't pay.</p>
+    <a class="btn btn-dark btn-xl" href="tel:+61296866333">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span>Start your feaso — call 02 9686 6333</span>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>What builders ask before they start.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>What size projects do you do feasos for?</summary>
+        <p>Anything from a single knockdown-rebuild duplex through to a 6–12 lot subdivision or a small mixed-use commercial. Past ~12 lots we'll still take the work but the fee scales — we'll quote up front.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>72 hours from the moment we have your build quote, comparable sales, land contract and any council DA conditions. Faster if it's urgent — call us and we'll tell you straight.</p>
+      </details>
+      <details>
+        <summary>Will my bank accept the format?</summary>
+        <p>Yes. We work with the major banks and the active private credit funders on the east coast. If your lender wants tweaks to the layout, we make them at no extra charge — that's part of the fee.</p>
+      </details>
+      <details>
+        <summary>What do you need from me to start?</summary>
+        <p>Contract of sale (or asking price + suburb), latest plans / DA, a real build quote (not a per-m² guess), and the names of any other parties involved. The more accurate your inputs, the more useful the output.</p>
+      </details>
+      <details>
+        <summary>What if I'm just exploring — not committed yet?</summary>
+        <p>Pick up the phone. The 15-minute triage call is free. We'll tell you whether the back-of-napkin numbers are even close before you spend $1,200 on a full model.</p>
+      </details>
+      <details>
+        <summary>Do you do JV deal structuring as well?</summary>
+        <p>Yes. Once the feaso is on the table we can model the JV split, hurdle returns and profit waterfalls. Quoted separately based on complexity.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final">
+  <div class="wrap final-grid">
+    <div>
+      <div class="eyebrow">LET'S TALK</div>
+      <h2>Project on your desk?<br>Get the numbers right first.</h2>
+      <p class="lead">15-minute triage call, no charge. Send us the address &amp; the brief — we'll tell you on the phone whether the deal stacks before you commit to a full feaso.</p>
+    </div>
+    <div class="final-card">
+      <a class="btn btn-primary btn-block btn-xl" href="tel:+61296866333">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Call 02 9686 6333</span>
+      </a>
+      <div class="final-or">or send a quick brief</div>
+      <form class="lead-form" action="mailto:admin@acebiz.com.au?subject=Project%20Feasibility%20Enquiry" method="post" enctype="text/plain">
+        <div class="row">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="e.g. Dave Thompson">
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="04xx xxx xxx">
+          </label>
+        </div>
+        <label>
+          <span>Project address / suburb</span>
+          <input type="text" name="address" placeholder="e.g. Lot 14, Smith St, Kellyville">
+        </label>
+        <label>
+          <span>What stage are you at?</span>
+          <textarea name="message" rows="3" placeholder="Pre-purchase due diligence, under contract, DA approved, etc."></textarea>
+        </label>
+        <button type="submit" class="btn btn-dark btn-block btn-lg">Send — we'll call you back today</button>
+        <p class="form-fineprint">By submitting you agree to be contacted by Builder Accountant. We never share your details.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Compact footer -->
+<footer class="ftr">
+  <div class="wrap ftr-grid">
+    <div class="ftr-col ftr-brand">
+      <div class="logo logo-light">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter">
+            <path d="M4 28 L16 6 L28 28 Z"/>
+            <path d="M10 28 L10 20 L22 20 L22 28"/>
+          </svg>
+        </span>
+        <span class="logo-text">BUILDER<span class="logo-text-2">ACCOUNTANT</span></span>
+      </div>
+      <p class="ftr-tag">Tax-smart accountants for Aussie builders, tradies and subbies.</p>
+      <p class="ftr-meta">A service of Ace Biz. <br>ABN 89&nbsp;168&nbsp;839&nbsp;076 · Registered Tax Agent</p>
+      <p class="ftr-meta ftr-meta-fine">Liability limited by a scheme approved under Professional Standards Legislation.</p>
+    </div>
+    <div class="ftr-col">
+      <h4>Browse</h4>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../index.html#services">All services</a></li>
+        <li><a href="../../index.html#pricing">Pricing</a></li>
+        <li><a href="../../checklist/index.html">EOFY Checklist</a></li>
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <h4>Contact</h4>
+      <ul class="ftr-contact">
+        <li><a href="tel:+61296866333"><strong>02 9686 6333</strong></a></li>
+        <li><a href="mailto:admin@acebiz.com.au">admin@acebiz.com.au</a></li>
+        <li>204/11 Solent Circuit<br>Norwest NSW 2153</li>
+        <li class="ftr-hours">Mon–Fri · 9am–5pm AEST</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap ftr-bottom">
+    <span>© <span id="yr">2026</span> Builder Accountant. All rights reserved.</span>
+    <span class="ftr-legal"><a href="../../index.html">Home</a> · <a href="../../index.html#faq">FAQ</a></span>
+  </div>
+</footer>
+
+<!-- Sticky mobile bar -->
+<div class="stk" role="navigation" aria-label="Quick contact">
+  <a class="stk-call" href="tel:+61296866333">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    <span>Call 02 9686 6333</span>
+  </a>
+  <a class="stk-mail" href="mailto:admin@acebiz.com.au" aria-label="Email us">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+  </a>
+</div>
+
+<script src="../../app.js" defer></script>
+</body>
+</html>
