@@ -1,6 +1,6 @@
-# Deployment & Next Steps — builderaccountant.com
+# Deployment & Next Steps — builderaccounting.com.au
 
-Reference for getting the site live at `builderaccountant.com` and configured for search.
+Reference for getting the site live at `builderaccounting.com.au` and configured for search.
 
 ---
 
@@ -11,7 +11,7 @@ Reference for getting the site live at `builderaccountant.com` and configured fo
 - ✅ Phone CTAs route to `0431 516 783` (mobile)
 - ✅ Schema.org JSON-LD targets Hills District + Central Coast NSW
 - ❌ Site is **not yet hosted** — pick a host below
-- ❌ DNS for `builderaccountant.com` not pointed yet
+- ❌ DNS for `builderaccounting.com.au` not pointed yet
 - ❌ Google Search Console + Google Business Profile not yet claimed
 
 ---
@@ -61,20 +61,20 @@ The site is pure static HTML/CSS/JS. Any of these will host it for free.
 
 1. github.com → repo → Settings → Pages.
 2. Source: Deploy from branch → `main` → `/ (root)` → Save.
-3. URL: `https://acebizcspartners.github.io/Builderbooks/`. To use `builderaccountant.com` you also need a `CNAME` file at the repo root containing `builderaccountant.com`.
+3. URL: `https://acebizcspartners.github.io/Builderbooks/`. To use `builderaccounting.com.au` you also need a `CNAME` file at the repo root containing `builderaccounting.com.au`.
 
 ---
 
 ## Step 3 — Point the domain
 
-Once the host has given you a URL, point `builderaccountant.com` at it.
+Once the host has given you a URL, point `builderaccounting.com.au` at it.
 
 1. Buy the domain at any registrar if you haven't (Cloudflare Registrar is cheapest for `.com` at cost; GoDaddy / VentraIP also fine).
 2. In the registrar's DNS panel, add records the host shows you — typically one of:
    - **CNAME** `www` → `acebizcspartners-builderbooks.pages.dev` (or `.vercel.app` etc.)
    - **A** `@` → the IP your host specifies
    - For Cloudflare-managed DNS, just add the domain in Pages → Custom domains → it auto-configures.
-3. Add **both** `builderaccountant.com` (apex) and `www.builderaccountant.com` and pick which one redirects to which (usually www → apex).
+3. Add **both** `builderaccounting.com.au` (apex) and `www.builderaccounting.com.au` and pick which one redirects to which (usually www → apex).
 4. Wait 5–60 minutes for DNS propagation. Most hosts auto-issue a free Let's Encrypt SSL cert.
 
 ---
@@ -85,9 +85,9 @@ Do these in the week after going live.
 
 ### Google Search Console
 
-1. [search.google.com/search-console](https://search.google.com/search-console) → Add property → URL prefix → `https://builderaccountant.com`.
+1. [search.google.com/search-console](https://search.google.com/search-console) → Add property → URL prefix → `https://builderaccounting.com.au`.
 2. Verify via DNS TXT record (the host or registrar gives you a panel to add it).
-3. Once verified, submit `https://builderaccountant.com/sitemap.xml`. *(Sitemap file not yet generated — see "Optional next builds" below.)*
+3. Once verified, submit `https://builderaccounting.com.au/sitemap.xml`. *(Sitemap file not yet generated — see "Optional next builds" below.)*
 
 ### Google Business Profile (Hills local pack)
 
@@ -135,9 +135,9 @@ Things I can do for you when you're ready — just say the word:
 After any edit:
 
 ```sh
-git -C "C:\Users\AnkitKulshrestha\builderaccountant.com" add <files>
-git -C "C:\Users\AnkitKulshrestha\builderaccountant.com" commit -m "Short description"
-git -C "C:\Users\AnkitKulshrestha\builderaccountant.com" push
+git -C "C:\Users\AnkitKulshrestha\builderaccounting.com.au" add <files>
+git -C "C:\Users\AnkitKulshrestha\builderaccounting.com.au" commit -m "Short description"
+git -C "C:\Users\AnkitKulshrestha\builderaccounting.com.au" push
 ```
 
 If you've connected the repo to Cloudflare / Vercel / Netlify, the push auto-deploys.
@@ -150,8 +150,8 @@ If you've connected the repo to Cloudflare / Vercel / Netlify, the push auto-dep
 |---|---|
 | Repo | github.com/acebizcspartners/Builderbooks |
 | Branch | `main` |
-| Local path | `C:\Users\AnkitKulshrestha\builderaccountant.com` |
-| Domain | `builderaccountant.com` (not yet purchased / pointed) |
+| Local path | `C:\Users\AnkitKulshrestha\builderaccounting.com.au` |
+| Domain | `builderaccounting.com.au` (not yet purchased / pointed) |
 | Phone | `0431 516 783` (international: `+61 431 516 783`) |
 | Email | `admin@acebiz.com.au` |
 | Office | Suite 204, 11 Solent Circuit, Norwest NSW 2153 |

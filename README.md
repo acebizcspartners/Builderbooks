@@ -1,4 +1,4 @@
-# builderaccountant.com
+# builderaccounting.com.au
 
 Lead-generation website for **Builder Accountant**, a service of Ace Biz — specialist accountants for Australian builders, tradies and small developers.
 
@@ -22,7 +22,7 @@ Loads on a 3G connection. Hostable anywhere that serves static files.
 ## File structure
 
 ```
-builderaccountant.com/
+builderaccounting.com.au/
 ├── index.html                          Main single-page site
 ├── styles.css                          All shared styles
 ├── app.js                              Progressive enhancement
@@ -72,10 +72,10 @@ First run will create the project. Subsequent pushes to `main` auto-deploy.
 
 ### GitHub Pages
 - Push to `main`, then in repo Settings → Pages, choose `main` branch, `/` root. URL will be `https://<user>.github.io/<repo>/`.
-- For a custom domain (`builderaccountant.com`), add a `CNAME` file at the root containing `builderaccountant.com` and configure DNS to point at GitHub Pages.
+- For a custom domain (`builderaccounting.com.au`), add a `CNAME` file at the root containing `builderaccounting.com.au` and configure DNS to point at GitHub Pages.
 
 ### Custom domain DNS (any host)
-Point `builderaccountant.com` A/AAAA/CNAME records at your chosen host. Most hosts give you exact values in their dashboard.
+Point `builderaccounting.com.au` A/AAAA/CNAME records at your chosen host. Most hosts give you exact values in their dashboard.
 
 ---
 
@@ -88,7 +88,7 @@ Things to update before going live:
 - [ ] Verify the `aggregateRating.ratingCount` value in the JSON-LD matches the actual Google review count
 - [ ] Wire `mailto:` form actions to a real form backend (Formspree, Netlify Forms, HubSpot, etc.)
 - [ ] Replace static testimonials with a live Google Reviews widget once chosen
-- [ ] Submit `https://builderaccountant.com/sitemap.xml` to Google Search Console
+- [ ] Submit `https://builderaccounting.com.au/sitemap.xml` to Google Search Console
 - [ ] Create / claim the Google Business Profile for 204/11 Solent Circuit, Norwest NSW 2153
 - [ ] Update the JSON-LD `geo` coordinates if Google Maps shows a more precise pin
 
