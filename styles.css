@@ -33,7 +33,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   margin: 0;
@@ -44,6 +44,7 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 img, svg { display: block; max-width: 100%; }
@@ -1076,19 +1077,22 @@ a.svc-link:hover .svc-more { color: var(--black); }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
   content: "+";
-  font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
   width: 32px;
   height: 32px;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--yellow);
   color: var(--black);
   border-radius: 50%;
   transition: transform .2s ease;
   flex: 0 0 auto;
 }
-.faq details[open] summary::after { content: "−"; }
+.faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p {
   padding: 0 24px 22px;
   margin: 0;
@@ -1414,20 +1418,33 @@ a.svc-link:hover .svc-more { color: var(--black); }
   body { font-size: 16px; padding-bottom: 76px; }
   .wrap { padding: 0 18px; }
 
+  h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  h2 { font-size: clamp(1.55rem, 6vw, 2rem); }
+
   .nav { display: none; }
   .hdr-cta .hdr-cta-num, .hdr-cta span { display: inline; }
   .hdr-row { height: 64px; gap: 12px; }
   .hdr-cta { padding: 8px 12px; font-size: .9rem; }
   .hdr-cta span strong { font-size: .95rem; }
 
+  .hero { padding: 56px 0 64px; }
+  .hero-lead { font-size: 1rem; }
+  .hero-card { padding: 24px; }
+  .hero-cta-stack { flex-direction: column; align-items: stretch; }
+  .hero-cta-stack .btn { width: 100%; }
+
   .pain-grid { grid-template-columns: 1fr; }
+  .pain-card { padding: 22px; }
   .process-grid { grid-template-columns: 1fr; }
+  .step-card { padding: 22px; }
   .testi-grid { grid-template-columns: 1fr; }
+  .testi-card { padding: 24px; }
   .more-grid { grid-template-columns: 1fr; }
   .more { padding: 36px 24px; }
   .more-cta { flex-direction: column; align-items: stretch; text-align: center; }
   .more-cta .btn { width: 100%; }
   .areas-grid { grid-template-columns: 1fr; }
+  .areas-card { padding: 22px; }
   .areas-cta { flex-direction: column; align-items: stretch; text-align: center; }
   .areas-cta .btn { width: 100%; }
   .office { grid-template-columns: 1fr; }
@@ -1437,7 +1454,7 @@ a.svc-link:hover .svc-more { color: var(--black); }
   .office-map iframe { min-height: 280px; }
   .lm-grid { grid-template-columns: 1fr; gap: 40px; }
   .lm-mock { order: -1; }
-  .lm-doc { box-shadow: 10px 10px 0 0 var(--yellow), 10px 10px 0 1px var(--black); }
+  .lm-doc { padding: 24px; box-shadow: 10px 10px 0 0 var(--yellow), 10px 10px 0 1px var(--black); }
   .why-stat-stack { grid-template-columns: 1fr 1fr; }
   .trust-sep { display: none; }
   .lead-form .row { grid-template-columns: 1fr; }
@@ -1446,17 +1463,93 @@ a.svc-link:hover .svc-more { color: var(--black); }
   .ftr-grid { grid-template-columns: 1fr; }
   .ftr-bottom { flex-direction: column; align-items: flex-start; }
 
+  .price { padding: 56px 0 64px; }
+  .price-copy { padding: 0; }
+  .price-tag {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 20px;
+  }
+  .price-amt { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .price-card { padding: 28px 22px; }
+  .final-card { padding: 28px 22px; }
+  .btn-xl { padding: 14px 22px; font-size: 1rem; }
+  .faq summary { padding: 18px 20px; font-size: 1rem; }
+  .faq details p { padding: 0 20px 18px; }
+
   .stk { display: flex; }
 }
 
 @media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
   .hdr-cta span { display: none; }
   .hdr-cta::after {
     content: "Call";
     font-weight: 700;
   }
+
+  h1 { font-size: clamp(1.7rem, 9vw, 2.2rem); }
+  h2 { font-size: clamp(1.4rem, 7vw, 1.8rem); }
+
   .services-grid { grid-template-columns: 1fr; }
   .why-stat-stack { grid-template-columns: 1fr; }
+
+  .hero-card { padding: 20px; }
+  .pain-card, .step-card, .areas-card, .testi-card { padding: 20px; }
+  .price-tag { padding: 16px; gap: 8px; }
+  .price-amt { font-size: clamp(2.4rem, 14vw, 3.4rem); }
+  .price-card { padding: 24px 18px; }
+  .final-card { padding: 24px 18px; }
+}
+
+/* ============================================================
+   Modern motion — scroll reveals + card hover lift
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity .6s cubic-bezier(.22,.61,.36,1),
+    transform .6s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.pain-card,
+.step-card,
+.testi-card,
+.areas-card,
+.service-card,
+.price-card,
+.final-card,
+.lm-doc {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.pain-card:hover,
+.step-card:hover,
+.testi-card:hover,
+.areas-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.btn {
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.faq details {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.faq details[open] {
+  box-shadow: 0 6px 0 0 var(--black);
 }
 
 /* ===== Motion preferences ===== */
@@ -1466,4 +1559,5 @@ a.svc-link:hover .svc-more { color: var(--black); }
     transition: none !important;
     scroll-behavior: auto !important;
   }
+  .reveal { opacity: 1; transform: none; }
 }
