@@ -733,13 +733,6 @@ a.svc-link:hover .svc-more { color: var(--black); }
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 14px;
 }
-.hl-black {
-  background: var(--black);
-  color: var(--yellow);
-  padding: 0 .15em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
 .price-lead {
   font-size: 1.15rem;
   color: rgba(0,0,0,.78);
