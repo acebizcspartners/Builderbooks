@@ -736,8 +736,7 @@ a.svc-link:hover .svc-more { color: var(--black); }
 .hl-black {
   background: var(--black);
   color: var(--yellow);
-  padding: .05em .25em;
-  border-radius: 4px;
+  padding: 0 .15em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
